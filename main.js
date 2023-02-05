@@ -7,10 +7,10 @@ const apellidoInput = document.getElementById("apellido")
 const emailInput = document.getElementById("email")
 const msgInput = document.getElementById("msg")
 const submit = document.getElementById("submit")
-// const starsNivel0 = document.getElementById("stars_nivel_0");
-// const starsNivel1 = document.getElementById("stars_nivel_1");
-// const calculateSkills = document.getElementById("calculate_skills");
-// const botonExperience = document.getElementById("botonExperience");
+const nivel_1 = document.getElementById("nivel1")
+const nivel_2 = document.getElementById("nivel2")
+const botonStars = document.getElementById("boton_stars")
+
 const info = [
     {
         name: "Google",
@@ -45,7 +45,7 @@ const skills = [
 ]
 
 const stars = [ 
-    {stars:1, link: "./1stars.jpg"},
+    {stars:1, link: "./1star.jpg"},
     {stars:2, link: "./2stars.jpg"},
     {stars:3, link: "./3stars.jpg"},
     {stars:4, link: "./4stars.jpg"},
@@ -115,7 +115,6 @@ window.onload = function () {
 function newTab (url){
     window.open(url,"__blank")
 }
-// resultsBoxElem.classList.remove("hide");
 googleButton.addEventListener('click', () =>{
 
     resultsBoxElem.innerHTML=`
@@ -185,14 +184,32 @@ submit.addEventListener('click', ()=>{
 
 function validar(name, last_name, mail){
     let valido = true;
+    if (name.length == 0){
+        return false;
+    }
+    if (last_name.length == 0){
+        return false;
+    }
     valido = mail;if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail))){ return false;};
     return valido;    
 }
 
 // --------
 
-function asignarStar(position){
-    let s = skills[position].stars;
-    let url = stars[s-1].link;
-    return url;
-}
+botonStars.addEventListener('click', () =>{
+    nivel_1.innerHTML = ""
+    nivel_2.innerHTML = ""
+    for (let index = 0; index < skills.length++; index++) {
+        if (index <2){
+            let s = skills[index].stars;
+            nivel_1.innerHTML+=`
+            <img src="${stars[s-1].link}" width= 100px>
+            `;
+        }else{
+            let s = skills[index].stars;
+            nivel_2.innerHTML+=`
+            <img src="${stars[s-1].link}" width= 100px>
+            `;
+        }   
+    }
+})
