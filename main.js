@@ -1,3 +1,32 @@
+const googleButton = document.getElementById('gButton');
+const facebookButton = document.getElementById('fButton');
+const instagramButton = document.getElementById('iButton');
+const resultsBoxElem = document.getElementById("results");
+// const botonExperience = document.getElementById("botonExperience");
+const info = [
+    {
+        name: "Google",
+        tecnology: "Python",
+        date: "21/06/1996",
+        link: "https://www.google.com/",
+        image: "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+    },
+    {
+        name: "Facebook",
+        tecnology: "Java",
+        date: "02/05/2017",
+        link: "https://www.facebook.com/",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+    },
+    {
+        name: "Instagram",
+        tecnology: "JavaScript",
+        date: "14/03/2013",
+        link: "https://www.instagram.com/",
+        image: "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png"
+    }
+]
+
 
 window.onload = function () {
     const IMAGENES = [
@@ -57,3 +86,62 @@ window.onload = function () {
 } 
 
 // ----------
+
+function finestraSecundaria (url){
+    window.open(url,"__blank")
+}
+// resultsBoxElem.classList.remove("hide");
+googleButton.addEventListener('click', () =>{
+
+    resultsBoxElem.innerHTML=`
+    <divx>
+        <p class="titulo">${info[0].name}</p>
+        <div class="results">
+        <button type="button" class="value"> Tecnología: ${info[0].tecnology}</button>
+        <button type="button" class="value"> Fecha: ${info[0].date}</button>
+        </div>
+        <div class = "results">
+        <button type="button" class="value" id="botonExperience" onclick= "javascript:finestraSecundaria('https://www.google.com')" >Ir al sitio</button>
+        </div>
+    </divx>
+    `;
+    let botonExperience = document.getElementById("botonExperience");
+})
+
+facebookButton.addEventListener('click', () =>{
+
+    resultsBoxElem.innerHTML=`
+    <div>
+        <p class="titulo">${info[1].name}</p>
+        <div class="results">
+        <button type="button" class="value"> Tecnología: ${info[1].tecnology}</button>
+        <button type="button" class="value"> Fecha: ${info[1].date}</button>
+        </div>
+        <div class = "results">
+        <button type="button" class="value" id="botonExperience" onclick= "javascript:finestraSecundaria('https://www.facebook.com')" >Ir al sitio</button>
+        </div>
+    </div>
+    `;
+    let botonExperience = document.getElementById("botonExperience");
+})
+
+instagramButton.addEventListener('click', () =>{
+
+    resultsBoxElem.innerHTML=`
+    <div>
+        <p class="titulo">${info[2].name}</p>
+        <div class="results">
+        <button type="button" class="value"> Tecnología: ${info[2].tecnology}</button>
+        <button type="button" class="value"> Fecha: ${info[2].date}</button>
+        </div>
+        <div class = "results">
+        <button type="button" class="value" id="botonExperience" onclick= "javascript:finestraSecundaria('https://www.instagram.com')" >Ir al sitio</button>
+        </div>
+    </div>
+    `;
+})
+
+  
+
+
+
