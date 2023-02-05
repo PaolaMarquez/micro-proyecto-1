@@ -149,3 +149,13 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.estrella{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 89px;
+    top: 361px;
+
+    background: #F1E924;
+}

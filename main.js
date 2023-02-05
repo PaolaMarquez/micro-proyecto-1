@@ -2,6 +2,9 @@ const googleButton = document.getElementById('gButton');
 const facebookButton = document.getElementById('fButton');
 const instagramButton = document.getElementById('iButton');
 const resultsBoxElem = document.getElementById("results");
+const starsNivel0 = document.getElementById("stars_nivel_0");
+// const starsNivel1 = document.getElementById("stars_nivel_1");
+const calculateSkills = document.getElementById("calculate_skills");
 // const botonExperience = document.getElementById("botonExperience");
 const info = [
     {
@@ -27,6 +30,14 @@ const info = [
     }
 ]
 
+const skills = [
+    {name: "Python", stars:5, nivel:0},
+    {name: "Java", stars:3, nivel:0},
+    {name: "HTML", stars:2, nivel:1},
+    {name: "JavaScript", stars:2, nivel:1},
+    {name: "CSS", stars:1, nivel:1},
+
+]
 
 window.onload = function () {
     const IMAGENES = [
@@ -142,7 +153,4 @@ instagramButton.addEventListener('click', () =>{
     `;
 })
 
-  
-
-
-
+// ----------
