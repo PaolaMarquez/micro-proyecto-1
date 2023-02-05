@@ -151,14 +151,6 @@
     align-items: center;
 }
 
-.estrella{
-    width: 15px;
-    height: 15px;
-    left: 89px;
-    top: 361px;
-    background: #F1E924;
-}
-
 .box-formulario{
     display: flex;
     flex-direction: column;

@@ -44,6 +44,14 @@ const skills = [
 
 ]
 
+const stars = [ 
+    {stars:1, link: "./1stars.jpg"},
+    {stars:2, link: "./2stars.jpg"},
+    {stars:3, link: "./3stars.jpg"},
+    {stars:4, link: "./4stars.jpg"},
+    {stars:5, link: "./5stars.jpg"},
+]
+
 window.onload = function () {
     const imagenes = [
         'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
@@ -159,8 +167,6 @@ instagramButton.addEventListener('click', () =>{
 })
 
 // ----------
-
-// ----------
 submit.addEventListener('click', ()=>{
     const name = nombreInput.value;
     const last_name = apellidoInput.value;
@@ -180,6 +186,13 @@ submit.addEventListener('click', ()=>{
 function validar(name, last_name, mail){
     let valido = true;
     valido = mail;if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail))){ return false;};
-    valido = mail;if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail))){ return false;};
     return valido;    
+}
+
+// --------
+
+function asignarStar(position){
+    let s = skills[position].stars;
+    let url = stars[s-1].link;
+    return url;
 }
