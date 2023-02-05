@@ -10,15 +10,40 @@
     width: 95px;
     height: 20px;
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
+    font-style: bold;
+    font-weight: 800;
     font-size: 30px;
-    line-height: 20px;
-    text-transform: uppercase;
+    /* line-height: 20px; */
     color: #000000;
     /* padding: 25px; */
     margin-top: 1.5cm;
+    margin-left: 0.5cm;
+    margin-bottom: 1cm;
 
+}
+
+.sub-titulo{
+    font-style: bold;
+    font-weight: 400;
+    width: 150px;
+    font-size: 15px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.texto{
+    width:200px;
+    /* height: 15px; */
+    font-style: normal;
+    font-size: 12px;
+    margin: 0cm;
+    margin-left: 1cm;
+    /* gap: 34px; */
+}
+.nombre{
+    font-size: 30px;
+    margin-bottom: 0;
 }
 
 .navbar{
@@ -58,7 +83,8 @@
 }
 
 .carousel {
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
 }
@@ -116,4 +142,10 @@
     margin-top: 1.5cm;
     margin-right: 1.5cm;
     
+}
+
+.centrado{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
