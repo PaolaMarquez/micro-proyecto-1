@@ -166,6 +166,20 @@ submit.addEventListener('click', ()=>{
     const last_name = apellidoInput.value;
     const mail = emailInput.value;
     const msg = msgInput.value;
-    let msg_imprimir = `Su solicitud ha sido enviada!\nNombre: ${name}\nApellido: ${last_name}\nCorreo: ${mail}`;
+    const valido = validar(name, last_name, mail)
+    let msg_imprimir = ``
+    if (valido){
+        msg_imprimir = `Su solicitud ha sido enviada!\nNombre: ${name}\nApellido: ${last_name}\nCorreo: ${mail}`;
+    }else{
+        msg_imprimir = `El formulario no fue enviado!\nIntrodujo datos inválidos`;
+    }
+    
     alert(msg_imprimir);
 })
+
+function validar(name, last_name, mail){
+    let valido = true;
+    valido = mail;if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail))){ return false;};
+    valido = mail;if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(mail))){ return false;};
+    return valido;    
+}

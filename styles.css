@@ -170,3 +170,9 @@
     margin: 0;
     text-align:justify;
 }
+
+.controles{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
