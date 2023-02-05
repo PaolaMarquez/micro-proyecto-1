@@ -2,9 +2,14 @@ const googleButton = document.getElementById('gButton');
 const facebookButton = document.getElementById('fButton');
 const instagramButton = document.getElementById('iButton');
 const resultsBoxElem = document.getElementById("results");
-const starsNivel0 = document.getElementById("stars_nivel_0");
+const nombreInput = document.getElementById("nombre")
+const apellidoInput = document.getElementById("apellido")
+const emailInput = document.getElementById("email")
+const msgInput = document.getElementById("msg")
+const submit = document.getElementById("submit")
+// const starsNivel0 = document.getElementById("stars_nivel_0");
 // const starsNivel1 = document.getElementById("stars_nivel_1");
-const calculateSkills = document.getElementById("calculate_skills");
+// const calculateSkills = document.getElementById("calculate_skills");
 // const botonExperience = document.getElementById("botonExperience");
 const info = [
     {
@@ -154,3 +159,13 @@ instagramButton.addEventListener('click', () =>{
 })
 
 // ----------
+
+// ----------
+submit.addEventListener('click', ()=>{
+    const name = nombreInput.value;
+    const last_name = apellidoInput.value;
+    const mail = emailInput.value;
+    const msg = msgInput.value;
+    let msg_imprimir = `Su solicitud ha sido enviada!\nNombre: ${name}\nApellido: ${last_name}\nCorreo: ${mail}`;
+    alert(msg_imprimir);
+})

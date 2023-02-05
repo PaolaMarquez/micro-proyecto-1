@@ -43,7 +43,7 @@
 }
 .nombre{
     font-size: 30px;
-    margin-bottom: 0;
+    margin-bottom: 1cm;
 }
 
 .navbar{
@@ -151,11 +151,21 @@
 }
 
 .estrella{
-    position: absolute;
     width: 15px;
     height: 15px;
     left: 89px;
     top: 361px;
-
     background: #F1E924;
+}
+
+.box-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.submit-button{
+    margin: 0;
+    text-align:justify;
 }

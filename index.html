@@ -10,10 +10,10 @@
 <body>
     <header class="navbar">
         <p class="navbar-item">HOME</p>
-        <p class="navbar-item">EXPERIENCE</p>
-        <p class="navbar-item">ABOUT ME</p>
-        <p class="navbar-item">SKILLS</p>
-        <p class="navbar-item">CONTACT ME</p>
+        <a class="navbar-item" href="#experience">EXPERIENCE</a>
+        <a class="navbar-item" href="#about_me">ABOUT ME</a>
+        <a class="navbar-item" href="#skills">SKILLS</a>
+        <a class="navbar-item" href="#contact_me">CONTACT ME</a>
     </header>
     <div class="carousel">
         <button id="retroceder">Retroceder</button>
@@ -24,7 +24,7 @@
         <button id="play">Play</button>
         <button id="stop" disabled>Stop</button>
     </div>
-    <p class="titulo">EXPERIENCE</p>
+    <p class="titulo" id="experience">EXPERIENCE</p>
     <div class="bar">
         <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" width=100px>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" width=80px>
@@ -41,7 +41,7 @@
     </section>
 
     <section>
-        <p class="titulo">ABOUT_ME</p>
+        <p class="titulo" id="about_me">ABOUT_ME</p>
         <div class="bar">
             <p class="titulo sub-titulo nombre">Paola Márquez</p>
             <img src="./about_me.png" width=100px>
@@ -85,7 +85,7 @@
         </section>
     </section>
     <section>
-        <p class="titulo">SKILLS</p>
+        <p class="titulo" id="skills">SKILLS</p>
         <div class="bar">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width=100px>
             <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" width=100px>
@@ -104,6 +104,42 @@
             <p class="logo">JAVASCRIPT</p>
             <p class="logo">CSS</p>
         </section>
+    </section>
+    <section>
+        <p class="titulo" id="contact_me">CONTACT_ME</p>
+        <div class="bar">
+            <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png" width=90px>
+            <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" width=90px>
+            <img src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png" width=90px>
+        </div>
+        <div class="bar">
+            <p class="logo">@paomarquez_e</p>
+            <p class="logo">paolamarquez@gmail.com</p>
+            <p class="logo">0424-2277428</p>
+        </div>
+        <section class="bar">
+            <button type="button" class="logo" id="iButton" onclick= "javascript:finestraSecundaria('https://instagram.com/paomarquez_e?igshid=MWI4MTIyMDE=')">GO TO INSTAGRAM</button>    
+            <button type="button" class="logo" id="iButton" onclick= "javascript:finestraSecundaria('https://www.gmail.com/')">GO TO GMAIL</button>    
+            <button type="button" class="logo" id="iButton" onclick= "javascript:finestraSecundaria('https://wa.me/4242277428')">GO TO WHATSAPP</button>    
+            
+        </section>
+        <form action="" name="formulario" method="get" class="box-formulario">
+            <p class="titulo sub-titulo nombre">FORMULARIO</p>
+            <input type="text" name="nombre" id="nombre" class="logo" maxlength="30" placeholder="Nombre: " required>
+            <br>
+            <input type="text" name="apellido" id="apellido" class="logo" maxlength="30" placeholder="Apellido: " required>
+            <br>
+            <input type="text" name="email" id="email" class="logo" maxlength="60" placeholder="Email: ej. xxxxx@gmail.com" required>
+            <br>
+            <input type="text" name="msg" id="msg" class="logo" maxlength="1000" placeholder="Escribe tu comentario...">
+            <br>
+            <!-- <input type="submit" name="submit" id="submit" class="logo submit-button" value="ENVIAR">
+            <br> -->
+        </form>
+        <div class="box-formulario">
+            <button type="submit" class="logo" id="submit">ENVIAR</button>
+            <br>
+        </div>
     </section>
     <script src="./main.js"></script>
 </body>
